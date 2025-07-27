@@ -1,9 +1,6 @@
 package br.com.itau.desafio.model;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
-import jakarta.validation.constraints.*;
-
 
 public class EstatisticaResponse {
 	private long count;
@@ -12,6 +9,15 @@ public class EstatisticaResponse {
 	private BigDecimal min;
 	private BigDecimal max;
 	
+	public EstatisticaResponse() {}
+	
+	public EstatisticaResponse(long count, BigDecimal sum, BigDecimal avg, BigDecimal min, BigDecimal max) {
+		this.count = count;
+		this.sum = sum;
+		this.avg = avg;
+		this.min = min;
+		this.max = max;
+	}
 	public long getCount() {
 		return count;
 	}
